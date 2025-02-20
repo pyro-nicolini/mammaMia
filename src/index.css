@@ -39,7 +39,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: #1a1a1a;
   color: white;
 }
@@ -53,39 +53,49 @@ nav {
   background-color: #213547;
 }
 
-
 .btn-outline-danger {
-  background: linear-gradient(#c17a3c, #873f00)!important;
+  background: linear-gradient(#c1ab3c, #ff5500) !important;
   font-weight: 500 !important;
-  border: none !important;
   transition: all 0.5s ease-in-out;
   color: wheat !important;
 }
 
 .btn-outline-danger:hover {
-  background: linear-gradient(#f0350b, #b83e05)!important;
+  background: linear-gradient(#f0350b, #b83e05) !important;
   color: white !important;
   scale: 1.03;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-warning {
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.btn-outline-warning:hover {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .bg-success {
   transition: all 0.2s ease-in;
   color: wheat !important;
-  background: linear-gradient(#36893e,#006c0b) !important;
+  background: linear-gradient(#595959, #101010) !important;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  border: none !important;
 }
 .bg-success:hover {
-  background: linear-gradient(#23f138,#01ab12) !important;
+  border: white solid 1px !important;
+  background: linear-gradient(#fd4343, #ff0000) !important;
   scale: 1.03;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .btn-outline-success {
-  background: linear-gradient(#36893e,#006c0b) !important;
+  background: linear-gradient(#36893e, #006c0b) !important;
   color: wheat !important;
   transition: all 0.2s ease-in;
 }
 
 .btn-outline-success:hover {
-  background: linear-gradient(#23f138,#01ab12) !important;
+  background: linear-gradient(#21af2f, #0f7819) !important;
   color: white !important;
   scale: 1.03;
 }

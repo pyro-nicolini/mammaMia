@@ -2,7 +2,7 @@ import Button from "./Button";
 
 function CardPizza({ name, price, ingredients, img }) {
     return (
-      <div className="card shadow-lg bg-dark border-black text-white" style={{ maxWidth: "18rem" }}>
+      <div className="card shadow-lg btn btn-outline-danger border-black text-white" style={{ maxWidth: "18rem" }}>
         <img
           className="card-img-top rounded"
           src={img}
@@ -15,7 +15,7 @@ function CardPizza({ name, price, ingredients, img }) {
           <p className="card-text">{ingredients.join(", ")}</p>
         </div>
         <div>
-        <Button buttonText={`ver más...`} className={'btn-outline-danger'} />
+        <Button buttonText={`ver más...`} className={'btn-outline-warning'} />
         <Button buttonText={`Añadir 🛒`} className={'bg-success text-white'}/>
         </div>
       </div>

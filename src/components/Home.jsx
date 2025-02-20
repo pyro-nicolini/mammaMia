@@ -45,14 +45,7 @@ function Home() {
               img="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-ac54-90f6c31eb3e3"
             />
           </div>
-          <div className="col-12 col-sm-6 col-md-6 col-lg-3 mt-3 mb-3 d-flex justify-content-center">
-            <CardPizza
-              name="Pepperoni"
-              price={6950}
-              ingredients={["🍕 mozzarella", "pepperoni", "orégano"]}
-              img="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-ac54-90f6c31eb3e3"
-            />
-          </div>
+  
         </div>
       </div>
     </>

@@ -3,10 +3,14 @@ import { useState } from "react";
 
 const Navbar = () => {
   const total = 25000;
-  const [token, setToken] = useState(false);
+  const [token, setToken] = useState(true);
 
   function logeado() {
     setToken(!token);
+    if (token) {
+      console.log('deslogeado')
+    } else {
+      console.log('Logeado')} 
   }
 
   return (
