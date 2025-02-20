@@ -1,40 +1,43 @@
 import Button from "./Button";
-import { useState } from "react"
+import { useState } from "react";
 
 const Navbar = () => {
   const total = 25000;
   const [token, setToken] = useState(false);
-  // const token = false
 
   function logeado() {
     setToken(!token);
-  };
+  }
+
   return (
     <nav>
       <div className="d-flex">
-        <Button buttonText={"🍕 Home"} />
+        <Button buttonText={"🍕 Home"} className="btn-outline-light" />
         <Button
           onClick={logeado}
-          className={token ? "d-block" : "d-none"}
+          className={`${token ? "d-block" : "d-none"} btn-outline-light`}
           buttonText={"🔓 Profile"}
         />
         <Button
           onClick={logeado}
-          className={token ? "d-block" : "d-none"}
+          className={`${token ? "d-block" : "d-none"} btn-outline-light`}
           buttonText={"🔒 Logout"}
         />
         <Button
           onClick={logeado}
-          className={token ? "d-none" : "d-block"}
+          className={`${!token ? "d-block" : "d-none"} btn-outline-light`}
           buttonText={"🔐 Login"}
         />
         <Button
           onClick={logeado}
-          className={token ? "d-none" : "d-block"}
+          className={`${!token ? "d-block" : "d-none"} btn-outline-light`}
           buttonText={"🔐 Register"}
         />
       </div>
-      <Button buttonText={`🛒 Total: $ ${total.toLocaleString().replace(',','.')}`} />
+      <Button
+        buttonText={`🛒 Total: $ ${total.toLocaleString().replace(",", ".")}`}
+        className="btn-outline-success"
+      />
     </nav>
   );
 };

@@ -23,6 +23,7 @@ a:hover {
 }
 
 body {
+  background-color: #242424;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -53,36 +54,38 @@ nav {
 }
 
 
-
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.btn-outline-danger {
+  background: linear-gradient(#c17a3c, #873f00)!important;
+  font-weight: 500 !important;
+  border: none !important;
+  transition: all 0.5s ease-in-out;
+  color: wheat !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn-outline-danger:hover {
+  background: linear-gradient(#f0350b, #b83e05)!important;
+  color: white !important;
+  scale: 1.03;
+}
+
+.bg-success {
+  transition: all 0.2s ease-in;
+  color: wheat !important;
+  background: linear-gradient(#36893e,#006c0b) !important;
+}
+.bg-success:hover {
+  background: linear-gradient(#23f138,#01ab12) !important;
+  scale: 1.03;
+}
+
+.btn-outline-success {
+  background: linear-gradient(#36893e,#006c0b) !important;
+  color: wheat !important;
+  transition: all 0.2s ease-in;
+}
+
+.btn-outline-success:hover {
+  background: linear-gradient(#23f138,#01ab12) !important;
+  color: white !important;
+  scale: 1.03;
 }

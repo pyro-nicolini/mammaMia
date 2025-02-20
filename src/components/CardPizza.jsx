@@ -15,8 +15,8 @@ function CardPizza({ name, price, ingredients, img }) {
           <p className="card-text">{ingredients.join(", ")}</p>
         </div>
         <div>
-        <Button buttonText={`ver más...`} />
-        <Button buttonText={`Añadir 🛒`} />
+        <Button buttonText={`ver más...`} className={'btn-outline-danger'} />
+        <Button buttonText={`Añadir 🛒`} className={'bg-success text-white'}/>
         </div>
       </div>
     );
