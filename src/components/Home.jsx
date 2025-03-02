@@ -11,7 +11,7 @@ function Home() {
           "https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_1280.jpg"
         }
         style={{
-          backgroundPosition: "center 61%",
+          backgroundPosition: "center 68%", backgroundSize: 'cover',
         }}
       />
       <div className="container-fluid bg-dark">
