@@ -1,45 +1,31 @@
 import Button from "./Button";
-import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ onLogout, auth }) => {
   const total = 25000;
-  const [token, setToken] = useState(true);
-
-  function logeado() {
-    setToken(!token);
-    if (token) {
-      console.log('deslogeado')
-    } else {
-      console.log('Logeado')} 
-  }
+  const { autorizado, autenticado } = auth || {};
+  const email = autenticado ? autenticado.email : '';
 
   return (
-    <nav>
-      <div className="d-flex">
+    <nav className="gap-1">
+      <div className="d-flex gap-2">
         <Button buttonText={"🍕 Home"} className="btn-outline-light" />
-        <Button
-          onClick={logeado}
-          className={`${token ? "d-block" : "d-none"} btn-outline-light`}
-          buttonText={"🔓 Profile"}
-        />
-        <Button
-          onClick={logeado}
-          className={`${token ? "d-block" : "d-none"} btn-outline-light`}
-          buttonText={"🔒 Logout"}
-        />
-        <Button
-          onClick={logeado}
-          className={`${!token ? "d-block" : "d-none"} btn-outline-light`}
-          buttonText={"🔐 Login"}
-        />
-        <Button
-          onClick={logeado}
-          className={`${!token ? "d-block" : "d-none"} btn-outline-light`}
-          buttonText={"🔐 Register"}
-        />
+        
+        {autorizado ? (
+          <>
+            <Button buttonText={`Bienvenido ${email}`} className="btn-warning" />
+            <Button className="btn-outline-light" buttonText={"🔓 Profile"} />
+            <Button onClick={onLogout} className="btn-danger" buttonText={"🔒 Logout"} />
+          </>
+        ) : (
+          <>
+            <Button className="btn-outline-light" buttonText={"🔐 Login"} />
+            <Button className="btn-outline-light" buttonText={"🔐 Register"} />
+          </>
+        )}
       </div>
+
       <Button
-        buttonText={`🛒 Total: $ ${total.toLocaleString().replace(",", ".")}`}
+        buttonText={`🛒 Total: ${total.toLocaleString("es-CL", { style: "currency", currency: "CLP" })}`}
         className="btn-outline-success"
       />
     </nav>
