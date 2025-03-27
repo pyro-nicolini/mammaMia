@@ -4,4 +4,4 @@ export default function Footer({footerText}) {
       <p>{footerText}</p>
     </footer>
   );
-}
+};
